@@ -1,0 +1,51 @@
+const request=new XMLHttpRequest();
+
+request.open("GET", "https://rest countries.com/v3.1/all") 
+request.send()
+
+request.onload=function(){
+if(request.status>=200 && request.status<300){ 
+    var countries =JSON.parse(request.response);
+
+//Print the country name, capital and flag countries.forEach((d) =>{ console.log(`${d.name.common} ${d.capital} ${d. flag}`) }); */
+
+for(let index in countries){
+
+console.log(countries [index].name.common); 
+console.log(countries [index]. capital); 
+console.log(countries [index]. flag);
+ TO COMPARE 2 JSON HAVING SAME PROPERTY
+
+ var obj1 = { name: "Person 1", age:5}; 
+ var obj2 = { age:5, name: "Person 1" };
+
+var obj1 = { name: "Person 1", age:5};
+
+var obj2 = { age:5, name: "Person 1" };
+
+var flag=true;
+
+if(Object.keys(obj1).length==Object.keys(obj2).length){ 
+    for(let key in obj1) { 
+        if(obj1 [key] ==obj2[key]) { 
+        
+
+continue;
+        }
+else {
+
+flag=false;
+
+break;
+
+}
+
+else {
+
+flag=false;
+
+}
+
+console.log(flag);
+
+
